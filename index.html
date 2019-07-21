@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home
+redirect_from: "/about/"
+---
+<h2 id="greeting">Good Day!</h2>
+
+<p>
+    I am an IT analyst living in Philadelphia – interested in systems analysis, programming, and web development.
+</p>
+<figure class="my-photo"></figure>
+<p>
+    I've been coding HTML & CSS since I was a teenager, and have always been intellectually curious when it comes to engineering and tech. A few years ago, I decided to go back to school for IT, studying Programming and Application Development. Check out a few of my personal <a href="{{ site.url }}/projects/">projects</a> and <a href="https://github.com/jpatrickdevine">repos</a>.
+</p>
+<p>
+    If you'd you like to contact me, use <a href="https://twitter.com/jpatrickdevine">Twitter</a> or <a href="https://www.linkedin.com/in/jpatrickdevine">LinkedIn</a>.
+</p>
+<p>
+    Thanks for stopping by!
+</p>
+<hr>
+<p>
+    <strong>Latest Blog Post:</strong> 
+    {% for post in site.posts limit:1 %}
+        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> – <span>{{ post.date | date_to_long_string }}</span>
+    {% endfor %}
+</p>
